@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QAMAT — L'heure de la prière, à la mosquée</title>
+<meta name="description" content="QAMAT est une sadaqa jâriya : gratuit pour toutes les mosquées, sans publicité, financé uniquement par des dons volontaires.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="QAMAT — L'heure de la prière, à la mosquée">
+<meta property="og:description" content="Une sadaqa jâriya : gratuite pour toutes les mosquées, sans publicité.">
+<meta property="og:image" content="https://qamat-waqf.github.io/img/apercu-whatsapp.jpg">
+<meta property="og:url" content="https://qamat-waqf.github.io">
+<meta name="theme-color" content="#141a3d">
+<link rel="icon" href="img/badge.svg" type="image/svg+xml">
+<style>
+@font-face{font-family:Lexend;src:url(fonts/Lexend-Regular.ttf);font-weight:400;font-display:swap}
+@font-face{font-family:Lexend;src:url(fonts/Lexend-SemiBold.ttf);font-weight:600;font-display:swap}
+@font-face{font-family:Lexend;src:url(fonts/Lexend-Bold.ttf);font-weight:700;font-display:swap}
+@font-face{font-family:Reem;src:url(fonts/ReemKufi-Bold.ttf);font-weight:700;font-display:swap}
+@font-face{font-family:Naskh;src:url(fonts/NotoNaskhArabic-Bold.ttf);font-weight:700;font-display:swap}
+:root{--ivoire:#fbf6ec;--indigo:#141a3d;--muted:#4a5070;--soleil:#f4c26b;--ambre:#f2934a;--grenat:#b5485c;--ligne:#e7dfcd;--vert:#1f8a5b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Lexend,system-ui,sans-serif;background:var(--ivoire);color:var(--indigo);line-height:1.55;font-size:17px}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ambre);outline-offset:2px}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.hero{background:linear-gradient(180deg,#141a3d 0%,#3a2f6b 45%,#b5485c 78%,#f2934a 100%);color:#fff;padding:24px 0 52px}
+.barre{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marque img{width:52px;height:52px}
+.nom{font-weight:700;letter-spacing:.32em;font-size:20px;line-height:1}
+.nom-ar{font-family:Reem;color:var(--soleil);font-size:20px;line-height:1.1}
+.lien-don{font-weight:600;font-size:15px;color:var(--soleil);text-decoration:none;border:1.5px solid rgba(244,194,107,.6);border-radius:99px;padding:7px 14px}
+h1{font-size:clamp(30px,6vw,48px);line-height:1.12;margin:10px 0 14px;font-weight:700}
+.basmala{font-family:Naskh;color:var(--soleil);font-size:clamp(22px,4vw,30px);margin:34px 0 0;text-align:center}
+.merci{margin-top:16px;font-weight:600}
+.merci span{font-family:Naskh;color:var(--grenat);margin-left:6px;white-space:nowrap}
+.pastille{display:inline-block;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:99px;padding:6px 14px;font-size:14px;font-weight:600}
+.lead{font-size:18px;max-width:620px;color:#f3eefc;margin:16px 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border-radius:12px;padding:13px 20px;font-weight:600;text-decoration:none;font-size:16px;border:0;cursor:pointer;font-family:inherit}
+.btn.p{background:var(--soleil);color:var(--indigo)}
+.btn.s{border:1.5px solid rgba(255,255,255,.6);color:#fff;background:transparent}
+.ecran-hero{margin-top:34px;border-radius:16px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.35);border:4px solid #0d1230}
+.ecran-hero img{display:block;width:100%;height:auto}
+.legende-hero{font-size:13px;color:#fde9d2;margin-top:10px}
+section{padding:52px 0;border-bottom:1px solid var(--ligne)}
+h2{font-size:26px;margin:0 0 8px;line-height:1.25}
+.sous{color:var(--muted);margin:0 0 24px}
+.socle{background:#fff;border:1px solid var(--ligne);border-left:6px solid var(--soleil);border-radius:14px;padding:22px 24px;font-size:18px}
+.points{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:20px}
+.point{background:#fff;border:1px solid var(--ligne);border-radius:14px;padding:18px}
+.point b{display:block;font-size:17px;margin-bottom:4px}
+.point span{color:var(--muted);font-size:15px}
+.etapes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;counter-reset:e}
+.etape{background:#fff;border:1px solid var(--ligne);border-radius:14px;padding:18px 18px 18px 64px;position:relative}
+.etape::before{counter-increment:e;content:counter(e);position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--indigo);color:var(--soleil);display:grid;place-items:center;font-weight:700}
+.etape b{display:block}
+.etape span{color:var(--muted);font-size:15px}
+video{width:100%;border-radius:14px;background:#000;display:block;aspect-ratio:16/9}
+.galerie{display:grid;grid-template-columns:2fr 1fr;gap:14px;align-items:start}
+.galerie figure{margin:0}
+.galerie img{width:100%;height:auto;border-radius:12px;display:block;border:1px solid var(--ligne)}
+figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.pile{display:grid;gap:14px}
+@media(max-width:640px){.galerie{grid-template-columns:1fr}.galerie .tel{max-width:300px;margin:0 auto}}
+.mat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.m{background:#fff;border:1px solid var(--ligne);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:6px}
+.m .ics{display:flex;align-items:center;gap:4px;height:74px}
+.m .ics img{width:74px;height:74px}
+.m .ics i{font-style:normal;font-weight:700;font-size:22px;color:var(--muted)}
+.m b{font-size:17px}.m span{color:var(--muted);font-size:15px}
+.avert{margin-top:14px;background:#fff6e5;border:1px solid #f1d9a6;border-radius:12px;padding:12px 16px;font-size:15px}
+.aussi{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+.aussi div{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--ligne);border-radius:12px;padding:10px 14px;font-size:15px}
+.aussi img{width:52px;height:52px;flex:none}
+.docs{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.doc{display:flex;gap:14px;align-items:center;background:#fff;border:1px solid var(--ligne);border-radius:14px;padding:16px;text-decoration:none}
+.ico{width:44px;height:44px;border-radius:10px;background:var(--indigo);color:var(--soleil);display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.doc small{display:block;color:var(--muted)}
+.install{background:var(--indigo);color:#fff;border-radius:16px;padding:24px}
+.install ol{margin:12px 0 0;padding-left:20px}
+.install li{margin:8px 0}
+.code{display:inline-flex;align-items:center;gap:8px;background:var(--soleil);color:var(--indigo);font-weight:700;letter-spacing:.12em;padding:3px 6px 3px 12px;border-radius:8px;font-size:20px;vertical-align:middle}
+.mini{font-family:inherit;font-size:13px;font-weight:600;letter-spacing:0;border:0;border-radius:6px;padding:5px 9px;cursor:pointer;background:var(--indigo);color:#fff}
+.install .petit{color:#c9cde4;font-size:14px;margin-top:14px}
+.cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:18px}
+.carte{background:#fff;border:1px solid var(--ligne);border-radius:14px;padding:18px}
+.carte h3{margin:0 0 4px;font-size:18px}
+.carte p{margin:0 0 12px;color:var(--muted);font-size:15px}
+.num{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 10px;border:1px solid var(--ligne);border-radius:12px;padding:10px 12px;margin-top:10px}
+.num b{font-size:19px;letter-spacing:.02em;white-space:nowrap}
+.actions{display:flex;gap:6px;flex-wrap:nowrap;justify-content:flex-end}
+.act{font-family:inherit;font-size:13px;font-weight:600;text-decoration:none;border-radius:8px;padding:7px 10px;border:1.5px solid var(--indigo);background:#fff;color:var(--indigo);cursor:pointer;white-space:nowrap}
+.act.wa{background:var(--vert);border-color:var(--vert);color:#fff}
+.moyens{display:flex;gap:8px;flex-wrap:wrap;margin:4px 0 2px}
+.moyen{font-size:13px;font-weight:700;border-radius:99px;padding:5px 12px}
+.moyen.wave{background:#1dc8f2;color:#062a3a}
+.moyen.om{background:#ff7900;color:#1a0d00}
+.alerte{background:#fff6e5;border:1px solid #f1d9a6;border-radius:10px;padding:10px 12px;font-size:14px;margin-top:12px}
+.partage{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center;background:#fff;border:1px solid var(--ligne);border-radius:16px;padding:20px}
+@media(max-width:640px){.partage{grid-template-columns:1fr;text-align:center}.partage .btns{justify-content:center}}
+.partage img{width:170px;height:170px;display:block;margin:0 auto}
+.nom-box{margin-top:20px;background:var(--indigo);color:#fff;border-radius:14px;padding:20px 24px}
+.nom-box h3{margin:0 0 8px;color:var(--soleil);font-size:18px}
+.nom-box p{margin:0;font-size:16px;line-height:1.6}
+.arn{font-family:Naskh;color:var(--soleil);white-space:nowrap}
+.appel{font-size:20px;font-weight:600;margin:0}
+footer{padding:30px 0 50px;color:var(--muted);font-size:14px;text-align:center}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(120px);opacity:0;visibility:hidden;background:var(--indigo);color:#fff;padding:10px 18px;border-radius:99px;font-size:15px;transition:transform .25s;z-index:9}
+.toast.on{transform:translateX(-50%) translateY(0);opacity:1;visibility:visible}
+</style>
+</head>
+<body>
+
+<header class="hero">
+ <div class="wrap">
+  <div class="barre">
+   <a class="marque" href="#" aria-label="QAMAT, accueil"><img src="img/badge.svg" alt=""><div><div class="nom">QAMAT</div><div class="nom-ar" lang="ar">قامت</div></div></a>
+   <a class="lien-don" href="#soutenir">Soutenir</a>
+  </div>
+  <p class="basmala" lang="ar">بسم الله الرحمن الرحيم</p>
+  <h1>L'heure de la prière,<br>à la mosquée.</h1>
+  <span class="pastille">Sadaqa jâriya · Gratuite pour les mosquées</span>
+  <p class="lead">QAMAT affiche les horaires de prière, l'adhan, l'iqama et les annonces de la mosquée sur un écran. L'imam règle tout depuis son téléphone, sur le Wi-Fi de la mosquée, sans internet.</p>
+  <div class="btns">
+   <a class="btn p" href="#installer">Installer QAMAT</a>
+  </div>
+  <div class="ecran-hero"><img src="img/ecran.jpg" width="1280" height="720" alt="Écran QAMAT : heure, horaires des cinq prières et iqama"></div>
+  <p class="legende-hero">Exemple d'écran, avec les horaires d'Abidjan.</p>
+ </div>
+</header>
+
+<section>
+ <div class="wrap">
+  <h2>Pourquoi QAMAT existe</h2>
+  <div class="socle">QAMAT affiche l'heure de la prière à la mosquée. C'est une <b>sadaqa jâriya</b>, offerte pour ALLAH au profit des mosquées : gratuite, sans publicité et sans abonnement, et appelée à durer. Elle vit uniquement grâce aux dons volontaires de ceux qui veulent y contribuer.</div>
+  <div class="points">
+   <div class="point"><b>Gratuite</b><span>Pour toutes les mosquées, sans abonnement.</span></div>
+   <div class="point"><b>Sans publicité</b><span>L'écran montre seulement les horaires et les informations de la mosquée.</span></div>
+   <div class="point"><b>Sans internet</b><span>Le Wi-Fi de la mosquée suffit.</span></div>
+   <div class="point"><b>Textes vérifiés</b><span>Adhkar et rappels validés par l'imam, toujours avec leur source.</span></div>
+  </div>
+  <div class="nom-box">
+   <h3>Pourquoi ce nom ?</h3>
+   <p><b>QAMAT</b> (<span lang="ar" class="arn">قامت</span>) vient de la phrase de l'iqama, <i>Qad qâmatiṣ-ṣalâh</i> (<span lang="ar" class="arn">قَدْ قَامَتِ الصَّلَاةُ</span>) : « la prière est établie ». C'est le moment que QAMAT annonce à la mosquée.</p>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2>À quoi ça ressemble</h2>
+  <p class="sous">Captures de l'écran et de la page de gestion.</p>
+  <div class="galerie">
+   <div class="pile">
+    <figure><img src="img/adhan.jpg" width="1280" height="720" alt="Écran de l'adhan de Maghrib" loading="lazy"><figcaption>À l'heure de la prière, l'adhan s'annonce à l'écran.</figcaption></figure>
+    <figure><img src="img/adhkar.jpg" width="1280" height="720" alt="Écran des adhkar après la prière" loading="lazy"><figcaption>Après la prière, les adhkar, avec leur source.</figcaption></figure>
+   </div>
+   <figure class="tel"><img src="img/telephone.jpg" width="520" height="971" alt="Page d'accueil de QAMAT sur le téléphone de l'imam" loading="lazy"><figcaption>L'imam règle les horaires depuis son téléphone.</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2>Quel matériel pour votre mosquée ?</h2>
+  <p class="sous">Le plus simple et le plus sûr : une box, branchée sur la télé.</p>
+  <div class="mat">
+   <div class="m"><div class="ics"><img src="img/equip/tele.svg" alt=""><i>+</i><img src="img/equip/box.svg" alt=""></div><b>Une box Android TV ou Google TV, avec le Play Store</b><span>Le premier choix, pour toute télé qui a une prise HDMI. QAMAT s'installe sur la box.</span></div>
+   <div class="m"><div class="ics"><img src="img/equip/tele-android.svg" alt=""></div><b>Une télé Google TV ou Android TV</b><span>Sans box, seulement si la télé a le Play Store. Sinon, ajoutez une box.</span></div>
+   <div class="m"><div class="ics"><img src="img/equip/routeur.svg" alt=""></div><b>Pas d'internet à la mosquée ?</b><span>Un simple routeur Wi-Fi, sans abonnement, suffit. Internet ne sert que le jour de l'installation.</span></div>
+  </div>
+  <div class="avert"><b>Comment reconnaître une bonne box :</b> la mention « Google TV » ou « Android TV », le Play Store présent, et une prise HDMI sur la télé.</div>
+  <div class="avert"><b>Clés Fire TV :</b> les modèles récents « 4K Select » et la nouvelle « Fire TV Stick HD » n'acceptent pas QAMAT. Préférez une box Android TV ou Google TV, avec le Play Store.</div>
+  <div class="aussi">
+   <div><img src="img/equip/telephone.svg" alt=""><span><b>Un téléphone</b> d'un responsable, pour tout régler sur le Wi-Fi de la mosquée.</span></div>
+   <div><img src="img/equip/onduleur.svg" alt=""><span><b>Coupures de courant :</b> QAMAT revient seul. Un onduleur est conseillé.</span></div>
+  </div>
+  <p class="sous" style="margin:18px 0 0">Tous les cas (PC Windows, vieille télé, projecteur, sans routeur…) sont détaillés dans le <a href="docs/QAMAT-guide-installation.pdf"><b>guide d'installation</b></a>.</p>
+ </div>
+</section>
+
+<section id="installer">
+ <div class="wrap">
+  <div class="install">
+   <h2>Installer QAMAT</h2>
+   <p style="margin:0;color:#dfe2f2">Sur la box de la mosquée (Android TV ou Google TV), ou sur une télé qui a le Play Store :</p>
+   <ol>
+    <li>Installer l'application <b>Downloader</b> (Play Store ou Amazon Appstore).</li>
+    <li>Dans Downloader, taper le code <span class="code">4588157 <button class="mini" data-copie="4588157">Copier</button></span></li>
+    <li>Installer QAMAT, puis suivre l'écran d'accueil.</li>
+   </ol>
+   <div class="btns" style="margin-top:18px">
+    <a class="btn p" href="https://github.com/qamat-waqf/qamat-telechargement/releases/latest/download/QAMAT.apk">Télécharger l'APK</a>
+   </div>
+   <p class="petit">Étapes détaillées, réglages de la télé et dépannage : <a href="docs/QAMAT-guide-installation.pdf" style="color:#fff"><b>guide d'installation (PDF)</b></a>. Windows : installateur sur demande. Besoin d'aide ? Écrivez-nous sur WhatsApp.</p>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <h2>Documents à télécharger</h2>
+  <p class="sous">Toujours la dernière version.</p>
+  <div class="docs">
+   <a class="doc" href="docs/QAMAT-guide-installation.pdf"><span class="ico">PDF</span><span>Guide d'installation<small>Matériel, étapes, réglages, dépannage</small></span></a>
+   <a class="doc" href="docs/QAMAT-fiche-prise-en-main.pdf"><span class="ico">PDF</span><span>Fiche de prise en main<small>Pour l'imam et les responsables</small></span></a>
+   <a class="doc" href="docs/QAMAT-affiche.jpg"><span class="ico">IMG</span><span>Affiche QAMAT<small>À imprimer ou partager</small></span></a>
+  </div>
+ </div>
+</section>
+
+<section id="soutenir">
+ <div class="wrap">
+  <h2>Soutenir QAMAT</h2>
+  <p class="appel">Soutenir QAMAT, c'est permettre à d'autres mosquées d'en profiter.</p>
+  <div class="cartes">
+   <div class="carte">
+    <h3>Faire un don</h3>
+    <p>Par Wave ou Orange Money, sur l'un de ces numéros.</p>
+    <div class="moyens"><span class="moyen wave">Wave</span><span class="moyen om">Orange Money</span></div>
+    <div class="num"><b>07 48 54 19 42</b><div class="actions"><button class="act" data-copie="0748541942">Copier</button></div></div>
+    <div class="num"><b>07 09 24 63 58</b><div class="actions"><button class="act" data-copie="0709246358">Copier</button></div></div>
+    <div class="alerte">Seuls les deux numéros affichés sur cette page sont ceux de QAMAT. QAMAT ne vous appellera jamais pour vous demander un don. QAMAT ne vous demandera jamais de code secret.</div>
+    <p class="merci">Qu'ALLAH vous récompense · <span lang="ar">جزاكم الله خيرا</span></p>
+   </div>
+   <div class="carte">
+    <h3>Nous contacter</h3>
+    <p>Installer QAMAT dans votre mosquée, poser une question, proposer votre aide.</p>
+    <div class="num"><b>07 48 54 19 42</b><div class="actions"><a class="act wa" href="https://wa.me/2250748541942?text=Assalamou%20alaykoum%2C%20je%20vous%20contacte%20au%20sujet%20de%20QAMAT.">WhatsApp</a><a class="act" href="tel:+2250748541942">Appeler</a></div></div>
+    <div class="num"><b>07 09 24 63 58</b><div class="actions"><a class="act wa" href="https://wa.me/2250709246358?text=Assalamou%20alaykoum%2C%20je%20vous%20contacte%20au%20sujet%20de%20QAMAT.">WhatsApp</a><a class="act" href="tel:+2250709246358">Appeler</a></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section>
+ <div class="wrap">
+  <div class="partage">
+   <img src="img/qr.svg" alt="Code QR vers cette page">
+   <div>
+    <h2>Partagez QAMAT</h2>
+    <p class="sous" style="margin-bottom:16px">Envoyez cette page à un imam, un responsable de mosquée ou un donateur. Le code QR mène ici.</p>
+    <div class="btns">
+     <a class="btn p" style="background:var(--vert);color:#fff" href="https://wa.me/?text=QAMAT%20%E2%80%94%20l%E2%80%99heure%20de%20la%20pri%C3%A8re%2C%20%C3%A0%20la%20mosqu%C3%A9e.%20Une%20sadaqa%20j%C3%A2riya%2C%20gratuite%20pour%20toutes%20les%20mosqu%C3%A9es.%20https%3A%2F%2Fqamat-waqf.github.io">Partager sur WhatsApp</a>
+     <button class="btn" style="border:1.5px solid var(--indigo);background:#fff;color:var(--indigo)" data-copie="https://qamat-waqf.github.io">Copier le lien</button>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer><div style="font-family:Naskh;color:var(--indigo);font-size:24px;margin-bottom:6px" lang="ar">الحمد لله</div>QAMAT · <span lang="ar">قامت</span> — Sadaqa jâriya, gratuite pour toutes les mosquées, sans publicité.</footer>
+<div class="toast" id="toast" role="status" aria-live="polite">Copié</div>
+<script>
+document.querySelectorAll('[data-copie]').forEach(function(b){
+ b.addEventListener('click',function(){
+  var t=b.getAttribute('data-copie'),ok=function(){var e=document.getElementById('toast');e.textContent='Copié : '+t;e.classList.add('on');setTimeout(function(){e.classList.remove('on')},1800)};
+  try{navigator.clipboard.writeText(t).then(ok,function(){fallback(t);ok()})}catch(e){fallback(t);ok()}
+ });
+});
+function fallback(t){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy')}catch(e){}a.remove()}
+</script>
+</body>
+</html>
